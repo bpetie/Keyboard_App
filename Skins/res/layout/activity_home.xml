@@ -1,0 +1,110 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    tools:context=".Home" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="#000000">
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="#ff0000"
+            android:fontFamily="serif"
+            android:onClick="sendCamera"
+            android:padding="5dp"
+            android:text="Camera"
+            android:textColor="#00feff" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/marker_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:indeterminate="true"
+                android:indeterminateBehavior="cycle" />
+
+            <ImageView
+                android:id="@+id/picture_result"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:scaleType="center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/button_bar"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:divider="?android:attr/dividerHorizontal"
+            android:dividerPadding="5dp"
+            android:orientation="horizontal"           
+            android:showDividers="middle" >
+
+            <Button
+                android:id="@+id/retake_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="sendRetake"
+                android:text="Retake Picture"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+            
+            <Button
+                android:id="@+id/ok_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="sendOk"
+                android:text="Continue"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+            
+            <Button
+                android:id="@+id/setting_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="sendSettings"
+                android:text="First, Click here to be sent to Choose the Keyboard"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/activate_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="sendActivate"
+                android:text="Second, Click here to Activate the Keyboard"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
